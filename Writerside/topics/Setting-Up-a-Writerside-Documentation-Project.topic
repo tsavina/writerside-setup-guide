@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Setting Up a Writerside Documentation Project"
+       id="Setting-Up-a-Writerside-Documentation-Project">
+
+    <tldr>
+        <p>Install the Writerside plugin, create a project, write a topic in semantic XML,
+           build locally, and push to GitHub.</p>
+    </tldr>
+
+    <p>
+        New to Writerside? This guide walks you through the setup process:
+        from installing the plugin to getting your first project on GitHub.
+    </p>
+
+    <chapter title="Prerequisites" id="prerequisites">
+        <p>Before you begin, make sure you have the following:</p>
+        <list>
+            <li>
+                <a href="https://www.jetbrains.com/idea/download/">IntelliJ IDEA</a>
+                (Community Edition is sufficient)
+            </li>
+            <li>A <a href="https://github.com">GitHub</a> account  </li>
+        </list>
+    </chapter>
+
+    <chapter title="Step 1: Install the Writerside plugin" id="install-plugin">
+        <p>
+            The Writerside plugin turns IntelliJ IDEA into a full documentation environment:
+            live preview, semantic markup, and local builds included.
+        </p>
+        <procedure>
+            <step>Open IntelliJ IDEA.</step>
+            <step>Select <ui-path>Plugins</ui-path> from the welcome screen,
+                or go to <ui-path>File | Settings | Plugins</ui-path>.</step>
+            <step>Select the <control>Marketplace</control> tab.</step>
+            <step>Search for <emphasis>Writerside</emphasis>.</step>
+            <step>Click <control>Install</control>, then restart the IDE when prompted.</step>
+        </procedure>
+        <tip>
+            After the restart, you will see a <control>Writerside</control> panel
+            in the left sidebar. This confirms the plugin is active.
+        </tip>
+    </chapter>
+
+    <chapter title="Step 2: Create a new documentation project" id="create-project">
+        <procedure>
+            <step>Go to <ui-path>File | New Project</ui-path>.</step>
+            <step>Select <control>Writerside</control> on the left, then select
+                <control>Starter Project</control>, and click <control>Next</control>.</step>
+            <step>Specify the name and location for your project and click <control>Create</control>.</step>
+        </procedure>
+        <tip>
+            Writerside generates a default help instance (your documentation site) and
+            a starter topic to explore the markup.
+            Remove the topic from the TOC when you're done by right-clicking it and selecting
+            <control>Remove from TOC</control>.
+        </tip>
+    </chapter>
+
+    <chapter title="Step 3: Add a new topic" id="add-topic">
+        <p>
+            Topics are the individual pages of your documentation. Writerside supports
+            both Markdown and XML. This guide uses XML topics for their semantic
+            elements and content reuse capabilities.
+        </p>
+        <procedure>
+            <step>In the <control>Table of Contents</control> pane, click <control>+</control>.</step>
+            <step>Select <control>Empty XML Topic</control>.</step>
+            <step>Specify a title and filename for your topic.</step>
+            <step>Write your content using semantic elements. See the
+                <a href="https://plugins.jetbrains.com/plugin/20158-writerside/docs/semantic-markup-reference.html">Semantic markup reference</a> for the full list.</step>
+        </procedure>
+        <tip>
+            The preview opens automatically when you first open a topic. To reopen it,
+            right-click any topic in the Table of Contents and select
+            <control>Preview Topic</control>.
+        </tip>
+    </chapter>
+
+    <chapter title="Step 4: Build the documentation locally" id="local-build">
+        <p>
+            Run a local build to catch errors before publishing.
+        </p>
+        <procedure>
+            <step>In the <control>Writerside</control> tool window, select your instance,
+                click <control>Export To</control>, and select <control>Web Archive</control>.</step>
+            <step>Click <control>Run</control>.</step>
+            <step>After the build completes, check the <control>Run</control> tool window
+                for errors and warnings.</step>
+            <step>Click <control>Show generated files</control> in the bottom-right popup
+                to open the output directory. Extract the ZIP archive and open your topic's
+                HTML file in a browser to preview it.</step>
+        </procedure>
+        <tip>
+            The <control>Show generated files</control> popup appears only immediately
+            after the build. If you missed it, run the build again.
+        </tip>
+    </chapter>
+
+    <chapter title="Step 5: Push to GitHub" id="push-to-github">
+        <p>
+            Push your source to GitHub to keep it version-controlled and shareable.
+        </p>
+        <procedure>
+            <step>
+                In IntelliJ IDEA, go to
+                <ui-path>Git | GitHub | Share Project on GitHub</ui-path>,
+                or <ui-path>VCS | Share Project on GitHub</ui-path> if Git is not yet enabled.
+            </step>
+            <step>Enter a repository name, uncheck <control>Private</control>, and click <control>Add account</control>
+                to authenticate with GitHub.</step>
+            <step>Click <control>Share</control>.
+                In the <control>Add Files For Initial Commit</control> dialog,
+                uncheck the <path>.idea</path> folder, then click <control>Add</control>. </step>
+        </procedure>
+    </chapter>
+
+</topic>
