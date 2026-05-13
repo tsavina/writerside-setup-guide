@@ -7,14 +7,10 @@
        id="Setting-Up-a-Writerside-Documentation-Project">
 
     <p>
-        This guide takes you from installing the Writerside plugin to publishing
-        your first project on GitHub. By the end, you'll have a working Writerside project
-        in IntelliJ IDEA, a locally built HTML version of your documentation, and a public
-        GitHub repository with your source files.
+        Learn how to create, build, and publish a Writerside documentation project.
     </p>
 
     <chapter title="Prerequisites" id="prerequisites">
-        <p>Before you begin, make sure you have the following:</p>
         <list>
             <li>
                 <a href="https://www.jetbrains.com/idea/download/">IntelliJ IDEA</a>
@@ -27,15 +23,12 @@
 
     <chapter title="Step 1: Install the Writerside plugin" id="install-plugin">
         <procedure>
-            <step>Open IntelliJ IDEA.</step>
-            <step>Select <ui-path>Plugins</ui-path> from the welcome screen,
-                or go to <ui-path>File | Settings | Plugins</ui-path>.</step>
-            <step>Select the <control>Marketplace</control> tab.</step>
+            <step>In IntelliJ IDEA, go to <ui-path>File | Settings | Plugins</ui-path> and open the <control>Marketplace</control> tab.</step>
             <step>Search for <emphasis>Writerside</emphasis>.</step>
             <step>Click <control>Install</control>, then restart the IDE when prompted.</step>
         </procedure>
         <p>
-            After the restart, you will see a <control>Writerside</control> panel
+            After the restart, you will see a <control>Writerside</control> pane
             in the left sidebar. This confirms the plugin is active.
         </p>
     </chapter>
@@ -48,10 +41,10 @@
             <step>Specify the name and location for your project and click <control>Create</control>.</step>
         </procedure>
         <p>
-            Once the project opens, you'll see the <control>Writerside</control> tool window
-            on the left with your instance (your documentation site)
-            and a <control>Table of Contents</control> pane showing the starter topic.
-            The main editor area shows the topic content, and the preview opens to the right.
+            When the project opens, you'll see the <control>Writerside</control> tool window
+            on the left with your instance (your documentation site).
+            The <control>Table of Contents</control> pane contains the starter topic.
+            The editor opens in the center, and the preview opens on the right.
         </p>
         <img src="writerside_window.png"
              alt="Writerside plugin workspace in IntelliJ IDEA"
@@ -83,9 +76,6 @@
     </chapter>
 
     <chapter title="Step 4: Build the documentation locally" id="local-build">
-        <p>
-            Run a local build to catch errors before publishing.
-        </p>
         <procedure>
             <step>In the <control>Writerside</control> tool window, right-click your instance
                 and select <ui-path>Export To | Web Archive</ui-path>.
@@ -131,7 +121,7 @@
         <list>
             <li>Your project opens in IntelliJ IDEA with the Writerside tool window visible</li>
             <li>Your topic renders in the preview pane without errors</li>
-            <li>A local build completes with no warnings in the Run tool window</li>
+            <li>A local build completes successfully</li>
             <li>Your repository is visible on GitHub with all source files committed</li>
         </list>
     </chapter>
